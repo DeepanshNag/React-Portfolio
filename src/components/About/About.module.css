@@ -1,0 +1,121 @@
+@import "../../vars.css";
+
+/* Main container styling */
+.container {
+  position: relative;
+  background: rgba(12, 12, 12, 0.7);
+  backdrop-filter: blur(10px); /* Add blur for a glassmorphic effect */
+  border-radius: 20px;
+  padding: 80px 60px;
+  margin-top: 100px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Title styling */
+.title {
+  color: var(--color-text);
+  font-size: 38px;
+  font-weight: 800; /* Increase font weight */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center; /* Center-align the title */
+}
+
+/* Content section */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Add space between image and items */
+  text-align: justify;
+}
+
+/* Image styling */
+.aboutImage {
+  width: 40%; /* Adjust image width */
+  height: auto;
+  max-height: 600px;
+  border-radius: 15px; /* Add rounded corners */
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* About items container */
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 20px; /* Add padding */
+}
+
+/* About item styling */
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  list-style: none;
+  padding: 30px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* Hover effect */
+.aboutItem:hover {
+  background-size: 100% 100%;
+  transform: translateY(-5px); /* Add a slight lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+}
+
+/* About item text */
+.aboutItem h3 {
+  font-size: 28px;
+  font-weight: 700; /* Make headings bolder */
+  margin-bottom: 8px;
+}
+
+.aboutItem p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 30px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

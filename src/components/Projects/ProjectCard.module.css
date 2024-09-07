@@ -1,0 +1,105 @@
+@import "../../vars.css";
+
+/* Container for the cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Add space between cards */
+  padding: 20px; /* Add padding around the cards */
+}
+
+/* Individual card */
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0 16px 14px 0 rgba(4, 21, 45, 0.8); /* Adjust shadow opacity */
+  padding: 18px 24px;
+  width: 32%; /* Set width to percentage for responsiveness */
+  height: 450px; /* Fixed height for all cards */
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add hover transition */
+}
+
+/* Hover effect on card */
+.container:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 20px 25px 0 rgba(4, 21, 45, 0.9); /* Enhance shadow on hover */
+}
+
+/* Image styling */
+.image {
+  margin-bottom: 20px;
+  height: 180px;
+  border-radius: 8px; /* Add border-radius to the image */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Title styling */
+.title {
+  font-size: 22px; /* Slightly increase font size */
+  font-weight: 700;
+  color: #fff; /* White color for contrast */
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Description styling */
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #d1e0ff; /* Lighter text color for readability */
+  font-family: sans-serif;
+  text-align: justify;
+  margin-bottom: auto;
+}
+
+/* Skills list styling */
+.skills {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+/* Individual skill styling */
+.skill {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 100px;
+  background: #1b3a69; /* Darker background for contrast */
+  color: #fff; /* White text color */
+  padding: 4px 12px; /* Adjust padding */
+}
+
+/* Links container styling */
+.links {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Individual link styling */
+.link {
+  text-decoration: none;
+  color: #fff; /* White text for contrast */
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  border-radius: 100px;
+  background: var(--color-primary);
+  padding: 8px 20px; /* Adjust padding for better appearance */
+  transition: background 0.3s; /* Add hover transition */
+}
+
+/* Hover effect for links */
+.link:hover {
+  background: #415a93; /* Darker shade on hover */
+}
